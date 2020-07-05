@@ -12,5 +12,9 @@
             <display value="Skilled nursing treatment plan Progress note and attainment of goals (narrative)"/>
         </coding>
     </code>
+    <subject>
+        <reference value="Patient/nl-core-patient-01"/>
+        <display value="Johan XXX_Helleman"/>
+    </subject>
     <conclusion value="Pijn is onder controle."/>
 </DiagnosticReport>

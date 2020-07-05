@@ -39,3 +39,59 @@ v: {
   "error" : ""
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13",
+      "concept" : [{
+        "code" : "image/jpeg",
+        "display" : "jpeg"
+      },
+      {
+        "code" : "image/gif",
+        "display" : "gif"
+      },
+      {
+        "code" : "image/png",
+        "display" : "png"
+      },
+      {
+        "code" : "image/jp2",
+        "display" : "jp2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:6b2aa0db-cf3e-49ab-ab70-bfbfc7965813",
+    "timestamp" : "2020-07-05T14:11:50.188Z",
+    "contains" : [{
+      "system" : "urn:ietf:bcp:13",
+      "code" : "image/jpeg",
+      "display" : "jpeg"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "image/gif",
+      "display" : "gif"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "image/png",
+      "display" : "png"
+    },
+    {
+      "system" : "urn:ietf:bcp:13",
+      "code" : "image/jp2",
+      "display" : "jp2"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
