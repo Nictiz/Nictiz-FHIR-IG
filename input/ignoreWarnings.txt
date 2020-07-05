@@ -13,3 +13,6 @@ INFORMATION: Patient/example: Patient.name[1]: This element does not match any k
 # If this was a real IG, there should be examples for these profiles too.  But it's not, and I'm lazy...
 WARNING: http://somewhere.org/fhir/uv/myig/StructureDefinition/myObservation: The Implementation Guide contains no examples for this profile
 WARNING: http://somewhere.org/fhir/uv/myig/StructureDefinition/mypractitioner: The Implementation Guide contains no examples for this profile
+
+# We don't have a code system definition for this Dutch GBA/BRP country code system
+#Code System URI "urn:oid:2.16.840.1.113883.2.4.4.16.34" is unknown so the code cannot be validated
