@@ -1,0 +1,198 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000"/>
+    <meta>
+        <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+      <!--<profile value="http://hl7.org/fhir/3.0/StructureDefinition/ValueSet"/>-->
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/resource-effectivePeriod">
+        <valuePeriod>
+            <start value="2017-12-31T00:00:00+02:00"/>
+        </valuePeriod>
+    </extension>
+    <url value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2--20171231000000"/>
+    <identifier>
+        <use value="official"/>
+        <system value="http://art-decor.org/ns/oids/vs"/>
+        <value value="2.16.840.1.113883.2.4.3.11.60.40.2.14.3.2"/>
+    </identifier>
+    <version value="2017-12-31T00:00:00"/>
+    <name value="JuridischeStatusCodelijst"/>
+    <title value="JuridischeStatusCodelijst"/>
+    <status value="active"/>
+    <experimental value="false"/>
+    <publisher value="Registratie aan de bron"/>
+    <contact>
+        <name value="Registratie aan de bron"/>
+        <telecom>
+            <system value="url"/>
+            <value value="https://www.registratieaandebron.nl"/>
+        </telecom>
+        <telecom>
+            <system value="url"/>
+            <value value="https://zibs.nl"/>
+        </telecom>
+    </contact>
+    <description value="JuridischeStatusCodelijst"/>
+    <immutable value="false"/>
+    <compose>
+        <include>
+            <system value="urn:oid:2.16.840.1.113883.2.4.3.11.22.232"/>
+            <concept>
+                <code value="1"/>
+                <display value="Rechterlijke machtiging (rm) voorlopig / voortgezette machtiging"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Rechterlijke machtiging (rm) voorlopig / voortgezette machtiging"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="2"/>
+                <display value="RM op eigen verzoek"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="RM op eigen verzoek"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="3"/>
+                <display value="RM met voorwaardelijk ontslag"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="RM met voorwaardelijk ontslag"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="4"/>
+                <display value="Onder toezichtstelling (ots)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Onder toezichtstelling (ots)"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="5"/>
+                <display value="In bewaringstelling (ibs)"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="In bewaringstelling (ibs)"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="6"/>
+                <display value="Voogdij"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Voogdij"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="7"/>
+                <display value="Bewindvoering"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Bewindvoering"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="8"/>
+                <display value="Mentorschap"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Mentorschap"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="9"/>
+                <display value="Onder curatele stelling"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Onder curatele stelling"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="10"/>
+                <display value="Zaakwaarneming"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Zaakwaarneming"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="11"/>
+                <display value="Strafrechterlijke justitiële contacten: tbs"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Strafrechterlijke justitiële contacten: tbs"/>
+                </designation>
+            </concept>
+            <concept>
+                <code value="12"/>
+                <display value="Strafrechterlijke justitiële contacten: overig"/>
+                <designation>
+                    <language value="nl-NL"/>
+                    <use>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="900000000000013009"/>
+                        <display value="Synonym"/>
+                    </use>
+                    <value value="Strafrechterlijke justitiële contacten: overig"/>
+                </designation>
+            </concept>
+        </include>
+    </compose>
+</ValueSet>

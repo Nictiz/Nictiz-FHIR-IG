@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="nl-core-contactpoint" />
+  <url value="http://fhir.nl/fhir/StructureDefinition/nl-core-contactpoint" />
+  <version value="1.0.2" />
+  <name value="nl-core-contactpoint" />
+  <title value="nl-core-contactpoint" />
+  <status value="active" />
+  <publisher value="HL7 Netherlands" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="Base StructureDefinition for Address Type with additions for Dutch realm addresses. Dutch addresses break down Address.line in several parts and it is important to mark an address as being 'officially registered'." />
+  <purpose value="Address information is used for visiting a person or organization and for addressing of mail." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v2.0.1(2015EN)" />
+    <name value="ContactInformation as part of HCIM Patient-v2.0.1(2015EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/Patient-v3.0(2016EN)" />
+    <name value="ContactInformation as part of HCIM Patient-v3.0(2016EN)" />
+    <comment value="ContactInformation has become an independent information model as of release 2017 of the HCIMs" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-contactinformation-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/ContactInformation-v1.0(2017EN)" />
+    <name value="HCIM ContactInformation-v1.0.1(2017EN)" />
+  </mapping>
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <type value="ContactPoint" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/ContactPoint" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="ContactPoint">
+      <path value="ContactPoint" />
+      <short value="ContactInformation" />
+      <definition value="Contact information includes a person's telephone numbers en e-mail addresses." />
+      <alias value="Contactgegevens" />
+      <example>
+        <label value="Mobile business phone number. Note: the mobile nature stems from the number being an 06-* number." />
+        <valueContactPoint>
+          <system value="phone" />
+          <value value="+31611234567" />
+          <use value="work" />
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Mobile phone number undetermined private/business. Note: the mobile nature stems from the number being an 06-* number." />
+        <valueContactPoint>
+          <system value="phone" />
+          <value value="+31611234567" />
+          <use value="mobile" />
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Land Line" />
+        <valueContactPoint>
+          <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                  <code value="LL" />
+                  <display value="Land Line" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="home">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="HP" />
+                  <display value="Primary Home" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Land Line" />
+        <valueContactPoint>
+          <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                  <code value="LL" />
+                  <display value="Land Line" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="temp">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="TMP" />
+                  <display value="Temporary" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Land Line" />
+        <valueContactPoint>
+          <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                  <code value="LL" />
+                  <display value="Land Line" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="work">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="WP" />
+                  <display value="Primary Work" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Fax" />
+        <valueContactPoint>
+          <system value="fax">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                  <code value="FAX" />
+                  <display value="Fax" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="home">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="HP" />
+                  <display value="Primary Home" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Fax" />
+        <valueContactPoint>
+          <system value="fax">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                  <code value="FAX" />
+                  <display value="Fax" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="temp">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="TMP" />
+                  <display value="Temporary" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Fax" />
+        <valueContactPoint>
+          <system value="fax">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.22.1" />
+                  <code value="FAX" />
+                  <display value="Fax" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="work">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="WP" />
+                  <display value="Primary Work" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Mobile Phone" />
+        <valueContactPoint>
+          <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="MC" />
+                  <display value="Mobile Phone" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="mobile">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="HP" />
+                  <display value="Primary Home" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Mobile Phone" />
+        <valueContactPoint>
+          <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="MC" />
+                  <display value="Mobile Phone" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="temp">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="TMP" />
+                  <display value="Temporary" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Mobile Phone" />
+        <valueContactPoint>
+          <system value="phone">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="MC" />
+                  <display value="Mobile Phone" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="mobile">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="WP" />
+                  <display value="Primary Work" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Home Pager" />
+        <valueContactPoint>
+          <system value="pager">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="PG" />
+                  <display value="Pager" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="home">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="HP" />
+                  <display value="Primary Home" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Temporary Pager" />
+        <valueContactPoint>
+          <system value="pager">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="PG" />
+                  <display value="Pager" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="temp">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="TMP" />
+                  <display value="Temporary" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Primary Work Pager" />
+        <valueContactPoint>
+          <system value="pager">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="PG" />
+                  <display value="Pager" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </system>
+          <value value="..." />
+          <use value="work">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="WP" />
+                  <display value="Primary Work" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <example>
+        <label value="Private email address" />
+        <valueContactPoint>
+          <system value="email" />
+          <value value="giesput@myweb.nl" />
+          <use value="home">
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/v3/AddressUse" />
+                  <code value="HP" />
+                  <display value="Primary Home" />
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+          </use>
+        </valueContactPoint>
+      </example>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+        <map value="NL-CM:0.1.5" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN" />
+        <map value="NL-CM:0.1.5" />
+        <comment value="ContactInformation" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.1" />
+        <comment value="ContactInformation" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.system">
+      <path value="ContactPoint.system" />
+      <short value="TelecomType / EmailAddressType" />
+      <alias value="TelecomSoort / EmailSoort" />
+      <min value="1" />
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.5" />
+        <comment value="TelecomType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/TelecomSoortCodelijst-to-ContactPointSystem" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+        <map value="NL-CM:0.1.19" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointSystem" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN" />
+        <map value="NL-CM:0.1.19" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointSystem" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.8" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointSystem" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.system.extension">
+      <path value="ContactPoint.system.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ContactPoint.system.extension:EmailAddressTypeCodelist">
+      <path value="ContactPoint.system.extension" />
+      <sliceName value="EmailAddressTypeCodelist" />
+      <short value="EmailAddressTypeCodelist" />
+      <alias value="EmailSoortCodelijst" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+    </element>
+    <element id="ContactPoint.system.extension:EmailAddressTypeCodelist.valueCodeableConcept:valueCodeableConcept">
+      <path value="ContactPoint.system.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="EmailSoortCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3--20171231000000" />
+          <display value="EmailSoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.8" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointSystem" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.system.extension:TelecomTypeCodelist">
+      <path value="ContactPoint.system.extension" />
+      <sliceName value="TelecomTypeCodelist" />
+      <short value="TelecomTypeCodelist" />
+      <alias value="TelecomSoortCodelijst" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+    </element>
+    <element id="ContactPoint.system.extension:TelecomTypeCodelist.valueCodeableConcept:valueCodeableConcept">
+      <path value="ContactPoint.system.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="TelecomSoortCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000" />
+          <display value="TelecomSoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.5" />
+        <comment value="TelecomType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/TelecomSoortCodelijst-to-ContactPointSystem" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.value">
+      <path value="ContactPoint.value" />
+      <short value="TelephoneNumber / EmailAddress" />
+      <alias value="Telefoonnummer / E-mailadres" />
+      <example>
+        <label value="Example TelephoneNumber international" />
+        <valueString value="+31611234567" />
+      </example>
+      <example>
+        <label value="Example EmailAddress" />
+        <valueString value="giesput@myweb.nl" />
+      </example>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+        <map value="NL-CM:0.1.23" />
+        <comment value="TelephoneNumber" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN" />
+        <map value="NL-CM:0.1.23" />
+        <comment value="TelephoneNumber" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.4" />
+        <comment value="EmailAddress" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+        <map value="NL-CM:0.1.20" />
+        <comment value="EmailAddress" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN" />
+        <map value="NL-CM:0.1.20" />
+        <comment value="EmailAddress" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.7" />
+        <comment value="EmailAddress" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.use">
+      <path value="ContactPoint.use" />
+      <short value="TelecomType / NumberType / EmailAddressType" />
+      <definition value="Purpose of this contact point" />
+      <alias value="TelecomSoort / NummerSoort / EmailSoort" />
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.5" />
+        <comment value="TelecomType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/TelecomSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+        <map value="NL-CM:0.1.22" />
+        <comment value="NumberType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN" />
+        <map value="NL-CM:0.1.22" />
+        <comment value="NumberType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.6" />
+        <comment value="NumberType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v2.0.1-2015EN" />
+        <map value="NL-CM:0.1.19" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v3.0-2016EN" />
+        <map value="NL-CM:0.1.19" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.8" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.use.extension">
+      <path value="ContactPoint.use.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ContactPoint.use.extension:EmailAddressTypeCodelist">
+      <path value="ContactPoint.use.extension" />
+      <sliceName value="EmailAddressTypeCodelist" />
+      <short value="EmailAddressTypeCodelist" />
+      <alias value="EmailSoortCodelijst" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+    </element>
+    <element id="ContactPoint.use.extension:EmailAddressTypeCodelist.valueCodeableConcept:valueCodeableConcept">
+      <path value="ContactPoint.use.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="EmailSoortCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.3--20171231000000" />
+          <display value="EmailSoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.8" />
+        <comment value="EmailAddressType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/EmailSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.use.extension:TelecomTypeCodelist.valueCodeableConcept:valueCodeableConcept">
+      <path value="ContactPoint.use.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="TelecomSoortCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.1--20171231000000" />
+          <display value="TelecomSoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.5" />
+        <comment value="TelecomType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/TelecomSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+    </element>
+    <element id="ContactPoint.use.extension:NumberTypeCodelist">
+      <path value="ContactPoint.use.extension" />
+      <sliceName value="NumberTypeCodelist" />
+      <short value="NumberTypeCodelist" />
+      <alias value="NummerSoortCodelijst" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/code-specification" />
+      </type>
+    </element>
+    <element id="ContactPoint.use.extension:NumberTypeCodelist.valueCodeableConcept:valueCodeableConcept">
+      <path value="ContactPoint.use.extension.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <binding>
+        <strength value="extensible" />
+        <description value="NummerSoortCodelijst" />
+        <valueSetReference>
+          <reference value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.20.6.2--20171231000000" />
+          <display value="NummerSoortCodelijst" />
+        </valueSetReference>
+      </binding>
+      <mapping>
+        <identity value="hcim-contactinformation-v1.0-2017EN" />
+        <map value="NL-CM:20.6.6" />
+        <comment value="NumberType. See for details the ConceptMap https://simplifier.net/resolve?target=simplifier&amp;canonical=http://nictiz.nl/fhir/ConceptMap/NummerSoortCodelijst-to-ContactPointUse" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>

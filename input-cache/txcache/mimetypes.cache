@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:13",
+  "code" : "image/jpeg"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "image/jpeg",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:13",
+  "code" : "image/gif"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "image/gif",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:13",
+  "code" : "image/png"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "image/png",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:ietf:bcp:13",
+  "code" : "image/jp2"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
+v: {
+  "display" : "image/jp2",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

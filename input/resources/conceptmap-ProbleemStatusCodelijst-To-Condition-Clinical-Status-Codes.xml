@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptMap xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/conceptmap.xsd">
+  <id value="ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/concept-bidirectional">
+    <valueBoolean value="false"/>
+  </extension>
+  <url value="http://nictiz.nl/fhir/ConceptMap/ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes"/>
+  <version value="2.1.1"/>
+  <name value="ProbleemStatusCodelijst-to-Condition-Clinical-Status-Codes"/>
+  <title value="HCIM ProbleemStatusCodelijst to Condition Clinical Status Codes"/>
+  <status value="active"/>
+  <publisher value="Nictiz"/>
+  <contact>
+    <name value="Nictiz"/>
+    <telecom>
+      <system value="email"/>
+      <value value="info@nictiz.nl"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Maps the HCIM OverdrachtConcern release 2017 terminology for ProblemStatus to the FHIR STU3 terminology associated with Condition.clinicalStatus"/>
+  <purpose value="To aid in mapping from ZIB OverdrachtConcern value set ProbleemStatusCodelijst to FHIR STU3 Condition.clinicalStatus"/>
+  <copyright value="CC0"/>
+  <sourceUri value="http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.5.1.2--20171231000000"/>
+  <targetUri value="http://hl7.org/fhir/ValueSet/condition-clinical"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="http://hl7.org/fhir/condition-clinical"/>
+    <targetVersion value="http://hl7.org/fhir/condition-clinical version 3.0.1"/>
+    <element>
+      <code value="55561003"/>
+      <display value="Active"/>
+      <target>
+        <code value="active"/>
+        <display value="Active"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>
+    <element>
+      <code value="55561003" />
+      <display value="Active" />
+      <target>
+        <code value="recurrence" />
+        <display value="Recurrence" />
+        <equivalence value="specializes" />
+        <comment value="When problem is recurring, it is active, but recurrence also tells you there has been a period of inactivity before. Recurrence thus provides more context than just 'active'."/>
+      </target>
+    </element>
+    <element>
+      <code value="73425007"/>
+      <display value="Inactive"/>
+      <target>
+        <code value="inactive"/>
+        <display value="Inactive"/>
+        <equivalence value="equal"/>
+      </target>
+    </element>    
+  <element>
+      <code value="73425007" />
+      <display value="Inactive" />
+      <target>
+        <code value="remission" />
+        <display value="Remission" />
+        <equivalence value="specializes" />
+        <comment value="When problem is in remission, it is considered inactive, but remission gives more context on the expectation of the problem returning. Remission thus provides more context than just 'inactive'."/>
+      </target>
+    </element>
+    <element>
+      <code value="73425007" />
+      <display value="Inactive" />
+      <target>
+        <code value="resolved" />
+        <display value="Resolved" />
+        <equivalence value="specializes" />
+        <comment value="When problem is resolved, it is considered inactive, but resolved gives more context on the expectation of the problem returning. Resolved thus provides more context than just 'inactive'."/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>
+
+

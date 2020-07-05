@@ -1,0 +1,57 @@
+Deleting .DS_Store files
+Refreshing source from:
+On branch release-1.3.11
+Your branch is up to date with 'origin/release-1.3.11'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Profiles - ZIB 2017/pdfa-Nictiz.IHE.MHD.DocumentManifest.xml
+	modified:   Profiles - ZIB 2017/pdfa-Nictiz.IHE.MHD.List.xml
+	modified:   Profiles - ZIB 2017/pdfa-Nictiz.IHE.MHD.Provide.Minimal.DocumentReference.xml
+	modified:   Profiles - ZIB 2017/pdfa-Nictiz.IHE.MHD.ProvideDocumentBundle.Minimal.xml
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Refresh examples from checked out Git branch
+Refresh conformance resources from checked out Git branch
+Creating IG from input
+Checking internet connection...
+Online
+
+FHIR IG Publisher Version 1.1.1 (Git# d3432fbc0971). Built 2020-07-04T00:36:51.739Z (34 hours old)
+File log: /var/folders/_v/bs1w5_bn3y948cccr4gwmx8w0000gn/T/fhir-ig-publisher-tmp.log
+Detected Java version: 14.0.1 from /Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home on x86_64 (64bit). 10240MB available
+Parameters: -ig ig.ini
+
+dir = /Users/ahenket/Development/GitHub/Nictiz/Nictiz-FHIR-IG, path = /Users/ahenket/.gem/ruby/2.6.0/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/ahenket/Development/lib/apache-ant-1.9.2/bin:/Users/ahenket/Development/lib/apache-ant-1.9.2/bin
+
+Run time = zondag 5 juli 2020 om 13:36:43 Midden-Europese zomertijd (2020-07-05T13:36:43+02:00)
+Package Cache: /Users/ahenket/.fhir/packages                                     (00:00.0036)
+Load Template from fhir.base.template                                            (00:01.0083)
+
+onLoad.findSpreadsheets:
+
+onLoad.updateIg:
+     [xslt] Processing /Users/ahenket/Development/GitHub/Nictiz/Nictiz-FHIR-IG/template/onLoad-ig-working.xml to /Users/ahenket/Development/GitHub/Nictiz/Nictiz-FHIR-IG/template/onLoad-ig-updated.xml
+     [xslt] Loading stylesheet /Users/ahenket/Development/GitHub/Nictiz/Nictiz-FHIR-IG/template/scripts/onLoad.xslt
+
+onLoad.extend:
+
+onLoad:
+Root directory: /Users/ahenket/Development/GitHub/Nictiz/Nictiz-FHIR-IG          (00:07.0660)
+Core Package hl7.fhir.r3.core#3.0.2
+Terminology Cache is at /Users/ahenket/Development/GitHub/Nictiz/Nictiz-FHIR-IG/input-cache/txcache. 9 files in cache (00:14.0701)
+Connect to Terminology Server at http://tx.fhir.org                              (00:14.0766)
+Load Package hl7.fhir.pubpack#0.0.6
+Load Package hl7.fhir.xver-extensions#0.0.4
+Initialization complete                                                          (00:16.0068)
+Load Content                                                                     (00:16.0069)
+Processing Conformance Resources                                                 (00:22.0470)
+Terminology server: Check for supported code systems for urn:iso:std:iso:3166    (00:31.0809)
+?Attempting to localize message sdf-16: All element definitions must have unique ids (snapshot) ( (ids: ContactPoint,ContactPoint.id,ContactPoint.extension,ContactPoint.system,ContactPoint.system.id,ContactPoint.system.extension,ContactPoint.system.extension:EmailAddressTypeCodelist,ContactPoint.system.extension:EmailAddressTypeCodelist.id,ContactPoint.system.extension:EmailAddressTypeCodelist.extension,ContactPoint.system.extension:EmailAddressTypeCodelist.url,ContactPoint.system.extension:EmailAddressTypeCodelist.value[x],ContactPoint.system.extension:EmailAddressTypeCodelist.value[x]:valueCodeableConcept,ContactPoint.system.extension:TelecomTypeCodelist,ContactPoint.system.extension:TelecomTypeCodelist.id,ContactPoint.system.extension:TelecomTypeCodelist.extension,ContactPoint.system.extension:TelecomTypeCodelist.url,ContactPoint.system.extension:TelecomTypeCodelist.value[x],ContactPoint.system.extension:TelecomTypeCodelist.value[x]:valueCodeableConcept,ContactPoint.system.value,ContactPoint.value,ContactPoint.use,ContactPoint.use.id,ContactPoint.use.extension,ContactPoint.use.extension:EmailAddressTypeCodelist,ContactPoint.use.extension:EmailAddressTypeCodelist.id,ContactPoint.use.extension:EmailAddressTypeCodelist.extension,ContactPoint.use.extension:EmailAddressTypeCodelist.url,ContactPoint.use.extension:EmailAddressTypeCodelist.value[x],ContactPoint.use.extension:EmailAddressTypeCodelist.value[x]:valueCodeableConcept,ContactPoint.use.extension:EmailAddressTypeCodelist.value[x]:valueCodeableConcept,ContactPoint.use.extension:NumberTypeCodelist,ContactPoint.use.extension:NumberTypeCodelist.id,ContactPoint.use.extension:NumberTypeCodelist.extension,ContactPoint.use.extension:NumberTypeCodelist.url,ContactPoint.use.extension:NumberTypeCodelist.value[x],ContactPoint.use.extension:NumberTypeCodelist.value[x]:valueCodeableConcept,ContactPoint.use.value,ContactPoint.rank,ContactPoint.period)) [snapshot.element.id.trace('ids').isDistinct()], but no such equivalent message exists for the local en_US
+Attempting to localize message sdf-17: All element definitions must have unique ids (diff) ( (ids: ContactPoint,ContactPoint.system,ContactPoint.system.extension,ContactPoint.system.extension:EmailAddressTypeCodelist,ContactPoint.system.extension:EmailAddressTypeCodelist.valueCodeableConcept:valueCodeableConcept,ContactPoint.system.extension:TelecomTypeCodelist,ContactPoint.system.extension:TelecomTypeCodelist.valueCodeableConcept:valueCodeableConcept,ContactPoint.value,ContactPoint.use,ContactPoint.use.extension,ContactPoint.use.extension:EmailAddressTypeCodelist,ContactPoint.use.extension:EmailAddressTypeCodelist.valueCodeableConcept:valueCodeableConcept,ContactPoint.use.extension:EmailAddressTypeCodelist.valueCodeableConcept:valueCodeableConcept,ContactPoint.use.extension:NumberTypeCodelist,ContactPoint.use.extension:NumberTypeCodelist.valueCodeableConcept:valueCodeableConcept)) [differential.element.id.trace('ids').isDistinct()], but no such equivalent message exists for the local en_US
+Attempting to localize message eld-13: Types must be unique by the combination of code and profile [type.select(code & profile & targetProfile).isDistinct()], but no such equivalent message exists for the local en_US
+???????Attempting to localize message sdf-8: In any snapshot, all the elements must be in the specified type [((%resource.kind = 'logical') or (element.first().path = %resource.type)) and element.tail().all(path.startsWith(%resource.snapshot.element.first().path & '.'))], but no such equivalent message exists for the local en_US
+?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????Attempting to localize message eld-2: Min <= Max [min.empty() or max.empty() or (max = '*') or (min <= max.toInteger())], but no such equivalent message exists for the local en_US
+???????????????????????????????????????????????????????????????
