@@ -6,7 +6,7 @@ Quality assurance testing of conformance resources in a branch of repository [Ni
 
 ## How to run
 * Clone this repo next to wherever you have cloned Nictiz-STU3-Zib2017. 
-* Run ```_updatePublisher.sh``` or ```_updatePublisher.bat```. This adds the IG Publisher to input-cache. Because of the size of ~130MB it is in .gitignore
+* Run ```_updatePublisher.sh``` or ```_updatePublisher.bat```. Do **NOT** choose overwrite scripts when prompted unless you have a good reason. This adds the IG Publisher to input-cache. Because of the size of ~130MB it is in .gitignore
 * Run ```_updateSources.sh``` or ```_updateSource.bat``` if necessary. This will get examples and conformance resources from whatever branch you have active in Nictiz-STU3-Zib2017.
 * Run ```_genonce.sh``` or ```_genonce.bat``` to run the build.
 
