@@ -5,7 +5,7 @@ Experimental repository to test conformance resources/examples with the IG Publi
 Quality assurance testing of conformance resources in a branch of Nictiz STU3 repository's.
 
 ## How to run
-* Clone this repo next to wherever you have cloned the STU3 repository. It might be a good idea to rename the resulting folder to align with the target repo (for example, 'Nictiz-FHIR-IG-Zib2017 when targeting the 'Zib2017' repo).
+* Clone this repo next to wherever you have cloned the STU3 repository. If you want to create separate IG's for each repo/project, rename the resulting folder to align with the target repo (for example, 'Nictiz-FHIR-IG-Zib2017 when targeting the 'Zib2017' repo). This is really only needed to make HTML links across packages work, otherwise you can just reuse this repo for different projects.
 * Run `_updatePublisher.sh` or `_updatePublisher.bat`. Do **NOT** choose overwrite scripts when prompted unless you have a good reason. This adds the IG Publisher to input-cache. Because of the size of ~130MB it is in .gitignore
 * Run `_updateSources*.sh` or `_updateSources*.bat`. This will get examples and conformance resources from whatever branch you have active in the corresponding repo folder. Please see the note about package versions below. 
 * Run `_genonce.sh` or `_genonce.bats` to run the build.
