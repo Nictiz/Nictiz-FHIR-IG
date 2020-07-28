@@ -13,11 +13,19 @@ IF EXIST %nictiz_input_source% (
     ECHO.
     
     ECHO Refresh examples from checked out Git branch
-    del /Q /S input\examples\*
+    IF EXIST input\examples (
+        del /Q /S input\examples\*
+    ) ELSE (
+        mkdir input\examples
+    )
     for /R %nictiz_input_source%\Examples %%F in (*.xml) do copy "%%F" input\examples\
     
     ECHO Refresh conformance resources from checked out Git branch
-    del /Q /S input\resources\*
+    IF EXIST input\resources (
+        del /Q /S input\resources\*
+    ) ELSE (
+        mkdir input\resources
+    )
     for /R "%nictiz_input_source%\Profiles - ZIB 2017" %%F in (*.xml) do copy "%%F" input\resources\
     
     java -cp %input_cache_path%/%publisher_jar% net.sf.saxon.Transform -xsl:Zib2017.xsl -s:Zib2017.xsl -o:input/myig.xml

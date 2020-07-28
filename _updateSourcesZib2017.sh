@@ -13,11 +13,19 @@ if [ -e $nictiz_input_source ]; then
     echo ""
     
     echo Refresh examples from checked out Git branch
-    rm -rf input/examples/*
+    if [ -e input/examples ]; then
+        rm -rf input/examples/*
+    else
+        mkdir input/examples
+    fi
     find $nictiz_input_source/Examples -name "*.xml" -exec cp {} input/examples/ \;
     
     echo Refresh conformance resources from checked out Git branch
-    rm -rf input/resources/*
+    if [ -e input/resources ]; then
+        rm -rf input/resources/*
+    else
+        mkdir input/resources
+    fi
     find $nictiz_input_source/Profiles\ -\ ZIB\ 2017 -name "*.xml" -exec cp {} input/resources/ \;
     
     echo Creating IG from input
