@@ -6,7 +6,7 @@ REM 2020-01-01 Nictiz additions
 REM ECHO Deleting .DS_Store files
 REM for /R . %%F in (.DS_Store) do del /F /Q %%F
 
-SET nictiz_input_source=../Nictiz-STU3-Zib2017
+SET nictiz_input_source=../Nictiz-STU3-eAfspraak
 IF EXIST %nictiz_input_source% (
     ECHO Refreshing source from:
     git -C %nictiz_input_source% status
@@ -18,9 +18,12 @@ IF EXIST %nictiz_input_source% (
     
     ECHO Refresh conformance resources from checked out Git branch
     del /Q /S input\resources\*
-    for /R "%nictiz_input_source%\Profiles - ZIB 2017" %%F in (*.xml) do copy "%%F" input\resources\
+    for /R "%nictiz_input_source%\Profiles" %%F in (*.xml) do copy "%%F" input\resources\
+    for /R "%nictiz_input_source%\CapabilityStatements" %%F in (*.xml) do copy "%%F" input\resources\
+    for /R "%nictiz_input_source%\OperationDefinitions" %%F in (*.xml) do copy "%%F" input\resources\
+    for /R "%nictiz_input_source%\SearchParameters" %%F in (*.xml) do copy "%%F" input\resources\
     
-    java -cp %input_cache_path%/%publisher_jar% net.sf.saxon.Transform -xsl:build-myig.xsl -s:build-myig.xsl -o:input/myig.xml
+    java -cp %input_cache_path%/%publisher_jar% net.sf.saxon.Transform -xsl:MedicationProcess.xsl -s:MedicationProcess.xsl -o:input/myig.xml
 ) ELSE (
     ECHO Cannot refresh conformance resources. Nictiz IG Publisher is not next to %nictiz_input_source%
 )
