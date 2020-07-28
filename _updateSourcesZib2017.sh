@@ -8,6 +8,16 @@ find . -name ".DS_Store" -exec rm {} \;
 
 nictiz_input_source=../Nictiz-STU3-Zib2017
 if [ -e $nictiz_input_source ]; then
+    if [ ! -d input ];
+        then mkdir input
+    fi
+    if [ ! -d input/resources ];
+        then mkdir input/resources
+    fi
+    if [ ! -d input/examples ];
+        then mkdir input/examples
+    fi
+
     echo Refreshing source from:
     git -C $nictiz_input_source status
     echo ""
