@@ -36,7 +36,7 @@ if [ -e $nictiz_input_source ]; then
         mv input/myig.xml input/myig-old.xml
     fi
     
-    java -cp $input_cache_path/$publisher_jar net.sf.saxon.Transform -xsl:MedicationProcess.xsl -s:MedicationProcess.xsl -o:input/myig.xml
+    java -cp $input_cache_path/$publisher_jar net.sf.saxon.Transform -xsl:Questionnaires.xsl -s:Questionnaires.xsl -o:input/myig.xml
 else
     echo Cannot refresh conformance resources. Nictiz IG Publisher is not next to $nictiz_input_source
 fi

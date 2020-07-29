@@ -21,7 +21,7 @@ IF EXIST %nictiz_input_source% (
     for /R "%nictiz_input_source%\Profiles" %%F in (*.xml) do copy "%%F" input\resources\
     for /R "%nictiz_input_source%\Questionnaires" %%F in (*.xml) do copy "%%F" input\resources\
     
-    java -cp %input_cache_path%/%publisher_jar% net.sf.saxon.Transform -xsl:Images.xsl -s:Images.xsl -o:input/myig.xml
+    java -cp %input_cache_path%/%publisher_jar% net.sf.saxon.Transform -xsl:Questionnaires.xsl -s:Questionnaires.xsl -o:input/myig.xml
 ) ELSE (
     ECHO Cannot refresh conformance resources. Nictiz IG Publisher is not next to %nictiz_input_source%
 )
