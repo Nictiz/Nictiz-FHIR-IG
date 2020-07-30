@@ -5,8 +5,8 @@ Experimental repository to test conformance resources/examples with the IG Publi
 Quality assurance testing of conformance resources in a branch of Nictiz STU3 repository's.
 
 ## Software list
-Jekyll (https://jekyllrb.com/docs/installation )
-JRE (https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
+* Jekyll (https://jekyllrb.com/docs/installation )
+* JRE (https://www.oracle.com/java/technologies/javase-jre8-downloads.html)
 
 ## How to run
 * Clone this repo next to wherever you have cloned the STU3 repository. If you want to create separate IG's for each repo/project, rename the resulting folder to align with the target repo (for example, 'Nictiz-FHIR-IG-Zib2017 when targeting the 'Zib2017' repo). This is really only needed to make HTML links across packages work, otherwise you can just reuse this repo for different projects.
