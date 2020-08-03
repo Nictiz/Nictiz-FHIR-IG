@@ -27,6 +27,7 @@ IF EXIST %nictiz_input_source% (
         mkdir input\resources
     )
     for /R "%nictiz_input_source%\Profiles - ZIB 2017" %%F in (*.xml) do copy "%%F" input\resources\
+    for /R "%nictiz_input_source%\CapabilityStatements" %%F in (*.xml) do copy "%%F" input\resources\	
     
     java -cp %input_cache_path%/%publisher_jar% net.sf.saxon.Transform -xsl:Zib2017.xsl -s:Zib2017.xsl -o:input/myig.xml
 ) ELSE (

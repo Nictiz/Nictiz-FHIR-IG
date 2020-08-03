@@ -29,6 +29,7 @@ if [ -e $nictiz_input_source ]; then
     echo Refresh conformance resources from checked out Git branch
     rm -rf input/resources/*
     find $nictiz_input_source/Profiles -name "*.xml" -exec cp {} input/resources/ \;
+    find $nictiz_input_source/CapabilityStatements -name "*.xml" -exec cp {} input/resources/ \;
     
     echo Creating IG from input
     if [ -e input/myig.xml ]; then 
