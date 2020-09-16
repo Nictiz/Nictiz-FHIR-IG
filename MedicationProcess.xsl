@@ -22,7 +22,7 @@
         
         <xsl:comment>Start by finding all references to "myig" and updating to appropriate text for your IG, including changing realm</xsl:comment>
         <ImplementationGuide xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir https://build.fhir.org/fhir-all.xsd" xmlns="http://hl7.org/fhir">
-            <id value="nictiz.fhir.nl.stu3.medicationprocesss"/>
+            <id value="nictiz.fhir.nl.stu3.medicationprocess"/>
             <xsl:comment>&lt;extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
                 &lt;valueString value="resources-spreadsheet.xml"/>
             &lt;/extension></xsl:comment>
