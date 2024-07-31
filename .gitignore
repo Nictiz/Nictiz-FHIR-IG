@@ -4,11 +4,14 @@
 /input/resources/*
 *.log
 
-# Temporary folders #
-#####################
+# Temporary files and folders #
+###############################
+input/myig.xml
+input/myig-old.xml
 temp
 template
 output
+input-cache
 
 # Don't commit this because it's so large #
 ###########################################
